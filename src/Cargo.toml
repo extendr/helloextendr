@@ -1,0 +1,11 @@
+[package]
+name = "helloextendr"
+version = "0.1.0"
+authors = ["andy-thomason <andy@andythomason.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+extendr-api = "0.1.10"
