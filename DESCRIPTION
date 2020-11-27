@@ -10,7 +10,7 @@ Description:
   This is a template package to demonstrate how to call
   Rust from R using the 'extendr-api' crate.
 License: MIT + file LICENSE
-SystemRequirements: Rust tool chain w/ cargo, libclang/llvm-config
+#SystemRequirements: Rust tool chain w/ cargo, libclang/llvm-config
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
