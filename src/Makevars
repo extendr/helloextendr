@@ -8,8 +8,8 @@ all: C_clean
 $(SHLIB): $(STATLIB)
 
 $(STATLIB):
-#	cargo build --lib --release --manifest-path=./rust/Cargo.toml
 	echo $(PATH)
+#	cargo build --lib --release --manifest-path=./rust/Cargo.toml
 	cargo build --lib --manifest-path=./rust/Cargo.toml
 
 C_clean:
