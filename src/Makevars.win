@@ -1,5 +1,5 @@
 TARGET = $(subst 64,x86_64,$(subst 32,i686,$(WIN)))-pc-windows-gnu
-LIBDIR = ./target/$(TARGET)/release
+LIBDIR = ./rust/target/$(TARGET)/release
 STATLIB = $(LIBDIR)/helloextendr.lib
 PKG_LIBS = -L$(LIBDIR) -lhelloextendr -lws2_32 -ladvapi32 -luserenv
 
@@ -8,7 +8,7 @@ all: clean
 $(SHLIB): $(STATLIB)
 
 $(STATLIB):
-	cargo build --target=$(TARGET) --release
+	cargo build --target=$(TARGET) --release --lib --manifest-path=./rust/Cargo.toml
 
 clean:
-	rm -Rf $(SHLIB) $(STATLIB) $(OBJECTS) ./target
+	rm -Rf $(SHLIB) $(STATLIB) $(OBJECTS)

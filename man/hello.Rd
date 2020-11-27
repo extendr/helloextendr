@@ -2,10 +2,10 @@
 % Please edit documentation in R/hello.R
 \name{hello}
 \alias{hello}
-\title{Call Rust function `hello()`}
+\title{Call Rust function \code{hello()}}
 \usage{
 hello()
 }
 \description{
-Call Rust function `hello()`.
+Call Rust function \code{hello()}.
 }

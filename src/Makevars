@@ -1,16 +1,19 @@
-
-LIBDIR = ./target/release
+#LIBDIR = ./rust/target/release  # debug compiles faster
+LIBDIR = ./rust/target/debug
 STATLIB = $(LIBDIR)/libhelloextendr.a
 PKG_LIBS = -L$(LIBDIR) -lhelloextendr
 
-all: clean
+all: C_clean
 
 $(SHLIB): $(STATLIB)
-	echo BUILDING SHLIB
 
 $(STATLIB):
-	echo BUILDING STATLIB
-	cargo build --release
+#	cargo build --lib --release --manifest-path=./rust/Cargo.toml
+	echo $(PATH)
+	cargo build --lib --manifest-path=./rust/Cargo.toml
+
+C_clean:
+	rm -Rf $(SHLIB) $(STATLIB) $(OBJECTS)
 
 clean:
-	rm -Rf $(SHLIB) $(STATLIB) $(OBJECTS)
+	rm -Rf $(SHLIB) $(STATLIB) $(OBJECTS) rust/target rust/Cargo.lock

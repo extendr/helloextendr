@@ -1,8 +1,10 @@
-# Minimal Example of the Rust extendr Crate
+# Minimal Example of Calling Rust from R
 
-This repository contains the template for an R package that interfaces with Rust via the extendr crate.
+This is a template package to demonstrate how to call Rust from R using the [extendr-api](https://crates.io/crates/extendr-api) crate.
 
 # Installation
+
+Before you can install this package, you need to install a working Rust toolchain. 
 
 To run rust-bindgen, you'll need to install libclang/llvm. See for instructions here: https://github.com/rust-lang/rust-bindgen/blob/master/book/src/requirements.md
 
