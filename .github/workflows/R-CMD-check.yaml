@@ -35,7 +35,7 @@ jobs:
           toolchain: ${{ matrix.config.rust-version }}
 
       - name: Install libclang
-        run: sudo apt-get install llvm-10-dev libclang-common-10-dev
+        run: sudo apt-get install llvm-10-dev libclang-10-dev
 
       - uses: r-lib/actions/setup-r@v1
         with:
@@ -75,7 +75,7 @@ jobs:
       - name: Check
         env:
           _R_CHECK_CRAN_INCOMING_REMOTE_: false
-          LIBCLANG_PATH: /usr/lib/llvm-3.9/lib
+          LIBCLANG_PATH: /usr/lib/llvm-10/lib
         run: rcmdcheck::rcmdcheck(args = c("--no-manual", "--as-cran"), error_on = "warning", check_dir = "check")
         shell: Rscript {0}
 
