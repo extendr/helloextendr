@@ -34,8 +34,8 @@ jobs:
         with:
           toolchain: ${{ matrix.config.rust-version }}
 
-      - name: Install libclang
-        run: sudo apt-get install llvm-3.9-dev libclang-3.9-dev
+#      - name: Install libclang
+#        run: sudo apt-get install llvm-3.9-dev libclang-3.9-dev
 
       - uses: r-lib/actions/setup-r@v1
         with:
