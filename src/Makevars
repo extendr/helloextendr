@@ -10,6 +10,8 @@ $(SHLIB): $(STATLIB)
 $(STATLIB):
 	echo $(LIBCLANG_PATH)
 	echo $(PATH)
+	which R
+	file `which R`
 #	cargo build --lib --release --manifest-path=./rust/Cargo.toml
 	cargo build --lib --manifest-path=./rust/Cargo.toml
 
