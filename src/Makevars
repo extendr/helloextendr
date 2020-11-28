@@ -8,9 +8,6 @@ all: C_clean
 $(SHLIB): $(STATLIB)
 
 $(STATLIB):
-	echo $(R_HOME)
-	echo $(R_INCLUDE_DIR)
-	echo $(PATH)
 #	cargo build --lib --release --manifest-path=./rust/Cargo.toml
 	cargo build --lib --manifest-path=./rust/Cargo.toml
 
