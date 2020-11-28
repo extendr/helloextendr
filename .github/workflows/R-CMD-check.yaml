@@ -34,9 +34,6 @@ jobs:
         with:
           toolchain: ${{ matrix.config.rust-version }}
 
-      - name: Install libclang
-        run: sudo apt-get install libclang1-10
-
       - uses: r-lib/actions/setup-r@v1
         with:
           r-version: ${{ matrix.config.r }}
@@ -58,6 +55,9 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
           restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
 
+## This section may be needed for R packages with complex dependencies,
+## but it is not needed for the simple example and it just slows things down,
+## hence it is commented out.
 #      - name: Install system dependencies
 #        if: runner.os == 'Linux'
 #        run: |
@@ -75,7 +75,7 @@ jobs:
       - name: Check
         env:
           _R_CHECK_CRAN_INCOMING_REMOTE_: false
-          LIBCLANG_PATH: /usr/lib/llvm-10/lib
+          #LIBCLANG_PATH: /usr/lib/llvm-10/lib
           LLVM_CONFIG_PATH: /usr/bin/llvm-config
         run: rcmdcheck::rcmdcheck(args = c("--no-manual", "--as-cran"), error_on = "warning", check_dir = "check")
         shell: Rscript {0}
