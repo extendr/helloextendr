@@ -76,7 +76,7 @@ jobs:
         env:
           _R_CHECK_CRAN_INCOMING_REMOTE_: false
           #LIBCLANG_PATH: /usr/lib/llvm-10/lib
-          LLVM_CONFIG_PATH: /usr/bin/llvm-config
+          #LLVM_CONFIG_PATH: /usr/bin/llvm-config
         run: rcmdcheck::rcmdcheck(args = c("--no-manual", "--as-cran"), error_on = "warning", check_dir = "check")
         shell: Rscript {0}
 
