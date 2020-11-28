@@ -9,3 +9,6 @@ crate-type = ["staticlib"]
 
 [dependencies]
 extendr-api = "0.1.10"
+
+[patch.crates-io]
+libR-sys = { path = "./libR-sys" }
