@@ -1,5 +1,8 @@
 # Minimal Example of Calling Rust from R
 
+[![R build status](https://github.com/clauswilke/helloextendr/workflows/R-CMD-check/badge.svg)](https://github.com/clauswilke/helloextendr/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This is a template package to demonstrate how to call Rust from R using the [extendr-api](https://crates.io/crates/extendr-api) crate.
 
 # Installation
