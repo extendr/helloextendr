@@ -8,10 +8,8 @@ all: C_clean
 $(SHLIB): $(STATLIB)
 
 $(STATLIB):
-	echo $(LIBCLANG_PATH)
+	echo $(R_HOME)
 	echo $(PATH)
-	which R
-	file `which R`
 #	cargo build --lib --release --manifest-path=./rust/Cargo.toml
 	cargo build --lib --manifest-path=./rust/Cargo.toml
 
