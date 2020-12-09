@@ -14,4 +14,4 @@ extendr-api = "0.1.11"
 extendr-api = { git = "https://github.com/extendr/extendr", branch = "extendr-engine" }
 extendr-engine = { git = "https://github.com/extendr/extendr", branch = "extendr-engine" }
 extendr-macros = { git = "https://github.com/extendr/extendr", branch = "extendr-engine" }
-libR-sys = { git = "https://github.com/clauswilke/libR-sys", branch = "R_home" }
+libR-sys = { git = "https://github.com/clauswilke/libR-sys", branch = "R_home_part2" }
