@@ -15,4 +15,4 @@ C_clean:
 	rm -Rf $(SHLIB) $(STATLIB) $(OBJECTS)
 
 clean:
-	rm -Rf $(SHLIB) $(STATLIB) $(OBJECTS) rust/target rust/Cargo.lock
+	rm -Rf $(SHLIB) $(STATLIB) $(OBJECTS) rust/target
