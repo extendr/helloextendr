@@ -5,6 +5,8 @@
 
 This is a template package to demonstrate how to call Rust from R using the [extendr-api](https://crates.io/crates/extendr-api) crate.
 
+**Note:** This is currently working successfully on Linux and on macOS, but there may be some remaining issues on Windows. We hope to have this addressed shortly.
+
 # Installation
 
 Before you can install this package, you need to install a working Rust toolchain. 
