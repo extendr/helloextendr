@@ -16,4 +16,4 @@ extendr-api = "0.1.11"
 extendr-api = { git = "https://github.com/extendr/extendr" }
 extendr-engine = { git = "https://github.com/extendr/extendr" }
 extendr-macros = { git = "https://github.com/extendr/extendr" }
-libR-sys = { git = "https://github.com/extendr/libR-sys" }
+libR-sys = { git = "https://github.com/clauswilke/libR-sys", branch = "precomputed_bindings" }
