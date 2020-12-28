@@ -72,12 +72,6 @@ jobs:
 #            eval sudo $cmd
 #          done < <(Rscript -e 'writeLines(remotes::system_requirements("ubuntu", "20.04"))')
 
-      - name: Install system dependencies on macOS
-        if: runner.os == 'macOS'
-        run: |
-          brew install llvm
-          echo "LIBCLANG_PATH=$(brew --prefix llvm)/lib" >> ~/.Renviron
-
       - name: Install dependencies
         run: |
           remotes::install_deps(dependencies = TRUE)
