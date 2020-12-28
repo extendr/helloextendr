@@ -6,13 +6,25 @@
 This is a template package to demonstrate how to call Rust from R using the [extendr-api](https://crates.io/crates/extendr-api) crate.
 
 
-# Installation
+## Installation
 
-Before you can install this package, you need to install a working Rust toolchain. 
+Before you can install this package, you need to install a working Rust toolchain. We recommend using [rustup.](https://rustup.rs/)
 
-To run rust-bindgen, you'll need to install libclang/llvm. See for instructions here: https://github.com/rust-lang/rust-bindgen/blob/master/book/src/requirements.md
-
-To build this package from within RStudio, you'll also have to make sure llvm is available in your path under R. To do so, add something like the following to your `.Renviron` file:
+On Windows, you'll also have to add the `i686-pc-windows-gnu` and `x86_64-pc-windows-gnu` targets:
 ```
-PATH=/usr/local/opt/llvm/bin:${PATH}
+rustup target add x86_64-pc-windows-gnu
+rustup target add i686-pc-windows-gnu
+```
+
+Once Rust is working, you can install this package via:
+```r
+remotes::install_github("extendr/helloextendr")
+```
+
+After installation, the following should work:
+```r
+library(helloextendr)
+
+hello()
+#> [1] "hello"
 ```
