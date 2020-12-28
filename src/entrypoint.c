@@ -1,6 +1,8 @@
-struct DllInfo;
+// We need to forward routine registration from C to Rust 
+// to avoid the linker removing the static library.
 
-void R_init_helloextendr(struct DllInfo *dll);
+void R_init_helloextendr_extendr(void *dll);
 
-// Ensure that the static library is retained by th elinker.
-void *p = (void*)&R_init_helloextendr;
+void R_init_helloextendr(void *dll) {
+  R_init_helloextendr_extendr(dll);
+}
