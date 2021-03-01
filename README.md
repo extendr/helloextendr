@@ -28,3 +28,29 @@ library(helloextendr)
 hello()
 #> [1] "hello"
 ```
+
+## Development
+
+### Generate wrappers
+
+When you make either of the following changes, you'll need to regenerate the wrappers.
+
+* add a new function
+* modify the signature of an existing function
+* modify the documentation written on Rust code (on the lines starting with `///`)
+
+This can be done by the following steps:
+
+``` r
+# Compile the Rust code (If you are using RStudio, just run "Install and Restart")
+devtools::install()
+
+# Re-generate wrappers
+brio::write_file(
+  .Call("wrap__make_helloextendr_wrappers", use_symbols = FALSE, package_name = "helloextendr"),
+  "R/extendr-wrappers.R"
+)
+
+# Re-generate documents and NAMESPACE (If you are using RStudio, just run "Document")
+devtools::document()
+```

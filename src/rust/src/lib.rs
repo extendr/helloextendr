@@ -1,5 +1,9 @@
 use extendr_api::*;
 
+/// Call Rust function `hello()`
+/// 
+/// Call Rust function `hello()`.
+/// @export
 #[extendr]
 fn hello() -> &'static str {
     "hello"
