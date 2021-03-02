@@ -33,7 +33,7 @@ hello()
 
 ### Generate wrappers
 
-When you make either of the following changes, you'll need to regenerate the wrappers.
+When you make either of the following changes to the Rust source code, you'll need to regenerate the wrappers.
 
 * add a new function
 * modify the signature of an existing function
