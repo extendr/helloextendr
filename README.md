@@ -33,6 +33,9 @@ hello()
 
 ### Generate wrappers
 
+(Note that this workflow will be improved in future;
+[rextendr package](https://github.com/extendr/rextendr) will provide some convenient function for this)
+
 When you make either of the following changes to the Rust source code, you'll need to regenerate the wrappers.
 
 * add a new function
