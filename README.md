@@ -34,7 +34,7 @@ hello()
 ### Install rextendr
 
 You will need [rextendr](https://github.com/extendr/rextendr) package to generate wrappers.
-Please install it before proceding to the next step.
+Please install it before proceeding to the next step.
 
 ``` r
 remotes::install_github("extendr/rextendr")
