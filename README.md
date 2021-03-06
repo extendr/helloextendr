@@ -31,10 +31,16 @@ hello()
 
 ## Development
 
-### Generate wrappers
+### Install rextendr
 
-(Note that this workflow will be improved in future;
-[rextendr package](https://github.com/extendr/rextendr) will provide some convenient function for this)
+You will need [rextendr](https://github.com/extendr/rextendr) package to generate wrappers.
+Please install it before proceding to the next step.
+
+``` r
+remotes::install_github("extendr/rextendr")
+```
+
+### Generate wrappers
 
 When you make either of the following changes to the Rust source code, you'll need to regenerate the wrappers.
 
@@ -49,10 +55,7 @@ This can be done by the following steps:
 devtools::install()
 
 # Re-generate wrappers
-brio::write_file(
-  .Call("wrap__make_helloextendr_wrappers", use_symbols = FALSE, package_name = "helloextendr"),
-  "R/extendr-wrappers.R"
-)
+rextendr::register_extendr()
 
 # Re-generate documents and NAMESPACE (If you are using RStudio, just run "Document")
 devtools::document()
