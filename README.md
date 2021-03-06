@@ -57,6 +57,6 @@ devtools::install()
 # Re-generate wrappers
 rextendr::register_extendr()
 
-# Re-generate documents and NAMESPACE (If you are using RStudio, just run "Document")
+# Re-generate documentation and NAMESPACE (If you are using RStudio, just run "Document")
 devtools::document()
 ```
