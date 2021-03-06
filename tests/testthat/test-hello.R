@@ -1,3 +1,3 @@
-test_that("Call to Rust function `hello()` works", {
-  expect_equal(hello(), "hello")
+test_that("Call to Rust function `hello_world()` works", {
+  expect_equal(hello_world(), "Hello world!")
 })

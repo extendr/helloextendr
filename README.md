@@ -28,3 +28,35 @@ library(helloextendr)
 hello()
 #> [1] "hello"
 ```
+
+## Development
+
+### Install rextendr
+
+You will need [rextendr](https://github.com/extendr/rextendr) package to generate wrappers.
+Please install it before proceding to the next step.
+
+``` r
+remotes::install_github("extendr/rextendr")
+```
+
+### Generate wrappers
+
+When you make either of the following changes to the Rust source code, you'll need to regenerate the wrappers.
+
+* add a new function
+* modify the signature of an existing function
+* modify the documentation written on Rust code (on the lines starting with `///`)
+
+This can be done by the following steps:
+
+``` r
+# Compile the Rust code (If you are using RStudio, just run "Install and Restart")
+devtools::install()
+
+# Re-generate wrappers
+rextendr::register_extendr()
+
+# Re-generate documentation and NAMESPACE (If you are using RStudio, just run "Document")
+devtools::document()
+```

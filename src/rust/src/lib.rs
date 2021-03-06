@@ -1,8 +1,10 @@
-use extendr_api::*;
+use extendr_api::prelude::*;
 
+/// Return string `"Hello world!"` to R.
+/// @export
 #[extendr]
-fn hello() -> &'static str {
-    "hello"
+fn hello_world() -> &'static str {
+    "Hello world!"
 }
 
 // Macro to generate exports.
@@ -10,5 +12,5 @@ fn hello() -> &'static str {
 // See corresponding C code in `entrypoint.c`.
 extendr_module! {
     mod helloextendr;
-    fn hello;
+    fn hello_world;
 }
