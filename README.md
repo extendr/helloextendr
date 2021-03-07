@@ -52,7 +52,7 @@ This can be done by the following steps:
 
 ``` r
 # Compile the Rust code (If you are using RStudio, just run "Install and Restart")
-devtools::install()
+devtools::install(quick = TRUE)
 
 # Re-generate wrappers
 rextendr::register_extendr()
