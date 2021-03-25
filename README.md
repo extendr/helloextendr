@@ -48,15 +48,8 @@ When you make either of the following changes to the Rust source code, you'll ne
 * modify the signature of an existing function
 * modify the documentation written on Rust code (on the lines starting with `///`)
 
-This can be done by the following steps:
+This can be done by:
 
 ``` r
-# Compile the Rust code (If you are using RStudio, just run "Install and Restart")
-devtools::install(quick = TRUE)
-
-# Re-generate wrappers
-rextendr::register_extendr()
-
-# Re-generate documentation and NAMESPACE (If you are using RStudio, just run "Document")
-devtools::document()
+rextendr::document()
 ```
