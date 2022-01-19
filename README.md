@@ -25,8 +25,8 @@ After installation, the following should work:
 ```r
 library(helloextendr)
 
-hello()
-#> [1] "hello"
+hello_world()
+#> [1] "Hello world!"
 ```
 
 ## Development
