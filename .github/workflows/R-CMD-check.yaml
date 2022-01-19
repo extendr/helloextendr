@@ -2,9 +2,11 @@ on:
   push:
     branches:
       - main
+      - overhaul
   pull_request:
     branches:
       - main
+      - overhaul
 
 name: R-CMD-check
 
@@ -18,7 +20,7 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - {os: windows-latest, r: 'release', rust-version: 'stable-x86_64-pc-windows-gnu'}
+          - {os: windows-latest, r: 'release', rust-version: 'stable'}
           - {os: macOS-latest,   r: 'release', rust-version: 'stable'}
           - {os: ubuntu-20.04,   r: 'release', rust-version: 'stable', rspm: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"}
           - {os: ubuntu-20.04,   r: 'devel',   rust-version: 'stable', rspm: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"}
