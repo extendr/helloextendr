@@ -2,11 +2,9 @@ on:
   push:
     branches:
       - main
-      - overhaul
   pull_request:
     branches:
       - main
-      - overhaul
 
 name: R-CMD-check
 
