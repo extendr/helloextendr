@@ -53,3 +53,9 @@ This can be done by:
 ``` r
 rextendr::document()
 ```
+
+Which will compile the Rust code as well as updating documentation.
+
+## Creating your own project
+
+For a fully worked out demonstration of how to create a Rust + R library see [here](https://extendr.github.io/rextendr/articles/package.html).
