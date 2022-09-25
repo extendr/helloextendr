@@ -36,7 +36,7 @@ jobs:
           default: true
 
       - name: Add Rust targets for R < 4.2 on Windows
-        if: startsWith(runner.os, 'Windows') && ${{ matrix.config.rtools-version }} != '42'
+        if: startsWith(runner.os, 'Windows') && matrix.config.r == '4.1'
         run: |
           rustup target add x86_64-pc-windows-gnu
           rustup target add i686-pc-windows-gnu
