@@ -18,12 +18,14 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - {os: windows-latest, r: 'release', rust-version: 'stable'}
+          - {os: windows-latest, r: 'release', rust-version: 'stable-gnu', rtools-version: '42'}
+          - {os: windows-latest, r: '4.1', rust-version: 'stable-msvc', rtools-version: '40'}
           - {os: macOS-latest,   r: 'release', rust-version: 'stable'}
           - {os: ubuntu-latest,  r: 'release', rust-version: 'stable'}
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+      TOOLCHAIN: ${{ matrix.config.rust-version }}
 
     steps:
       - uses: actions/checkout@v2
@@ -33,7 +35,8 @@ jobs:
           toolchain: ${{ matrix.config.rust-version }}
           default: true
 
-      - if: startsWith(runner.os, 'Windows')
+      - name: Add Rust targets for R < 4.2 on Windows
+        if: startsWith(runner.os, 'Windows') && matrix.config.r == '4.1'
         run: |
           rustup target add x86_64-pc-windows-gnu
           rustup target add i686-pc-windows-gnu
@@ -44,6 +47,7 @@ jobs:
         with:
           r-version: ${{ matrix.config.r }}
           use-public-rspm: true
+          rtools-version: ${{ matrix.config.rtools-version }}
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
