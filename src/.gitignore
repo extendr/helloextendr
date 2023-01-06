@@ -2,4 +2,3 @@
 *.so
 *.dll
 target
-Cargo.lock
