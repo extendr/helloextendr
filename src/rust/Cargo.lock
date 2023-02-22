@@ -5,8 +5,7 @@ version = 3
 [[package]]
 name = "extendr-api"
 version = "0.3.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "68ddc930e3d31c8c1a694ae2046919d24488ee07822b8f585baa3dc4f733071d"
+source = "git+https://github.com/eitsupi/extendr?rev=ab54824f3c125f8937d3d6c7b8c8117984e9dec9#ab54824f3c125f8937d3d6c7b8c8117984e9dec9"
 dependencies = [
  "extendr-engine",
  "extendr-macros",
@@ -18,8 +17,7 @@ dependencies = [
 [[package]]
 name = "extendr-engine"
 version = "0.3.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5b1f8530ca57a3cf70225c59cfa127cc412b4c52f8a95d45b3f79b5c68349ef4"
+source = "git+https://github.com/eitsupi/extendr?rev=ab54824f3c125f8937d3d6c7b8c8117984e9dec9#ab54824f3c125f8937d3d6c7b8c8117984e9dec9"
 dependencies = [
  "libR-sys",
 ]
@@ -27,8 +25,7 @@ dependencies = [
 [[package]]
 name = "extendr-macros"
 version = "0.3.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "90d5d38a703fd5d0168f86abd4c2f6b9d3dbb2d4ae2f654221575b528221ea0c"
+source = "git+https://github.com/eitsupi/extendr?rev=ab54824f3c125f8937d3d6c7b8c8117984e9dec9#ab54824f3c125f8937d3d6c7b8c8117984e9dec9"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -37,7 +34,7 @@ dependencies = [
 
 [[package]]
 name = "helloextendr"
-version = "0.1.0"
+version = "0.3.0"
 dependencies = [
  "extendr-api",
 ]

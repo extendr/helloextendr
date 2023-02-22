@@ -4,8 +4,8 @@ version = '0.3.0'
 edition = '2021'
 
 [lib]
-crate-type = [ 'staticlib' ]
+crate-type = ['staticlib']
 name = 'helloextendr'
 
 [dependencies]
-extendr-api = '*'
+extendr-api = { git = "https://github.com/eitsupi/extendr", rev = "ab54824f3c125f8937d3d6c7b8c8117984e9dec9" }
