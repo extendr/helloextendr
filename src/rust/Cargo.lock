@@ -5,7 +5,7 @@ version = 3
 [[package]]
 name = "extendr-api"
 version = "0.3.1"
-source = "git+https://github.com/eitsupi/extendr?rev=ab54824f3c125f8937d3d6c7b8c8117984e9dec9#ab54824f3c125f8937d3d6c7b8c8117984e9dec9"
+source = "git+https://github.com/eitsupi/extendr?rev=c5ab8d4ef9bb7ff9f9de06f75d3518313753d9af#c5ab8d4ef9bb7ff9f9de06f75d3518313753d9af"
 dependencies = [
  "extendr-engine",
  "extendr-macros",
@@ -17,7 +17,7 @@ dependencies = [
 [[package]]
 name = "extendr-engine"
 version = "0.3.1"
-source = "git+https://github.com/eitsupi/extendr?rev=ab54824f3c125f8937d3d6c7b8c8117984e9dec9#ab54824f3c125f8937d3d6c7b8c8117984e9dec9"
+source = "git+https://github.com/eitsupi/extendr?rev=c5ab8d4ef9bb7ff9f9de06f75d3518313753d9af#c5ab8d4ef9bb7ff9f9de06f75d3518313753d9af"
 dependencies = [
  "libR-sys",
 ]
@@ -25,7 +25,7 @@ dependencies = [
 [[package]]
 name = "extendr-macros"
 version = "0.3.1"
-source = "git+https://github.com/eitsupi/extendr?rev=ab54824f3c125f8937d3d6c7b8c8117984e9dec9#ab54824f3c125f8937d3d6c7b8c8117984e9dec9"
+source = "git+https://github.com/eitsupi/extendr?rev=c5ab8d4ef9bb7ff9f9de06f75d3518313753d9af#c5ab8d4ef9bb7ff9f9de06f75d3518313753d9af"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -48,11 +48,7 @@ checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 [[package]]
 name = "libR-sys"
 version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2a97fd689379c62156b5c9b7b368d118ef660ad8c220a2f3e4c655529ad52384"
-dependencies = [
- "winapi",
-]
+source = "git+https://github.com/eitsupi/libR-sys?rev=e05ad4cfa3ad089ed0cdaacbb1fda8f3f3750fa0#e05ad4cfa3ad089ed0cdaacbb1fda8f3f3750fa0"
 
 [[package]]
 name = "paste"
@@ -94,25 +90,3 @@ name = "unicode-ident"
 version = "1.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "84a22b9f218b40614adcb3f4ff08b703773ad44fa9423e4e0d346d5db86e4ebc"
-
-[[package]]
-name = "winapi"
-version = "0.3.9"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5c839a674fcd7a98952e593242ea400abe93992746761e38641405d28b00f419"
-dependencies = [
- "winapi-i686-pc-windows-gnu",
- "winapi-x86_64-pc-windows-gnu",
-]
-
-[[package]]
-name = "winapi-i686-pc-windows-gnu"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ac3b87c63620426dd9b991e5ce0329eff545bccbbb34f3be09ff6fb6ab51b7b6"
-
-[[package]]
-name = "winapi-x86_64-pc-windows-gnu"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f"

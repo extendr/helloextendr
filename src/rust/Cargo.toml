@@ -8,4 +8,4 @@ crate-type = ['staticlib']
 name = 'helloextendr'
 
 [dependencies]
-extendr-api = { git = "https://github.com/eitsupi/extendr", rev = "ab54824f3c125f8937d3d6c7b8c8117984e9dec9" }
+extendr-api = { git = "https://github.com/eitsupi/extendr", rev = "c5ab8d4ef9bb7ff9f9de06f75d3518313753d9af" }
