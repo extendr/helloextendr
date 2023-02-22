@@ -5,7 +5,7 @@ version = 3
 [[package]]
 name = "extendr-api"
 version = "0.3.1"
-source = "git+https://github.com/eitsupi/extendr?rev=c5ab8d4ef9bb7ff9f9de06f75d3518313753d9af#c5ab8d4ef9bb7ff9f9de06f75d3518313753d9af"
+source = "git+https://github.com/eitsupi/extendr?rev=f35068ea0db234d59c2b944d7b54914e92c51e4b#f35068ea0db234d59c2b944d7b54914e92c51e4b"
 dependencies = [
  "extendr-engine",
  "extendr-macros",
@@ -17,7 +17,7 @@ dependencies = [
 [[package]]
 name = "extendr-engine"
 version = "0.3.1"
-source = "git+https://github.com/eitsupi/extendr?rev=c5ab8d4ef9bb7ff9f9de06f75d3518313753d9af#c5ab8d4ef9bb7ff9f9de06f75d3518313753d9af"
+source = "git+https://github.com/eitsupi/extendr?rev=f35068ea0db234d59c2b944d7b54914e92c51e4b#f35068ea0db234d59c2b944d7b54914e92c51e4b"
 dependencies = [
  "libR-sys",
 ]
@@ -25,7 +25,7 @@ dependencies = [
 [[package]]
 name = "extendr-macros"
 version = "0.3.1"
-source = "git+https://github.com/eitsupi/extendr?rev=c5ab8d4ef9bb7ff9f9de06f75d3518313753d9af#c5ab8d4ef9bb7ff9f9de06f75d3518313753d9af"
+source = "git+https://github.com/eitsupi/extendr?rev=f35068ea0db234d59c2b944d7b54914e92c51e4b#f35068ea0db234d59c2b944d7b54914e92c51e4b"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -48,7 +48,7 @@ checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 [[package]]
 name = "libR-sys"
 version = "0.3.0"
-source = "git+https://github.com/eitsupi/libR-sys?rev=e05ad4cfa3ad089ed0cdaacbb1fda8f3f3750fa0#e05ad4cfa3ad089ed0cdaacbb1fda8f3f3750fa0"
+source = "git+https://github.com/eitsupi/libR-sys?rev=de5bdb80bce26879ceb23b7cc66c51421666f1e6#de5bdb80bce26879ceb23b7cc66c51421666f1e6"
 
 [[package]]
 name = "paste"
