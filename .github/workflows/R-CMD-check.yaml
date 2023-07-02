@@ -29,10 +29,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: actions-rs/toolchain@v1
+      - uses: dtolnay/rust-toolchain@master
         with:
           toolchain: ${{ matrix.config.rust-version }}
-          default: true
+          targets: ${{ matrix.config.rust-target }}
 
       - uses: r-lib/actions/setup-pandoc@v2
 
