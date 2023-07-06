@@ -10,10 +10,9 @@ This is a template package to demonstrate how to call Rust from R using the [ext
 
 Before you can install this package, you need to install a working Rust toolchain. We recommend using [rustup.](https://rustup.rs/)
 
-On Windows, you'll also have to add the `i686-pc-windows-gnu` and `x86_64-pc-windows-gnu` targets:
+On Windows, you'll also have to add the `x86_64-pc-windows-gnu` target:
 ```
 rustup target add x86_64-pc-windows-gnu
-rustup target add i686-pc-windows-gnu
 ```
 
 Once Rust is working, you can install this package via:
