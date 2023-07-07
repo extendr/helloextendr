@@ -4,3 +4,4 @@
 ^tests/testthat/_snaps$
 ^\.github$
 
+^src/\.cargo$
